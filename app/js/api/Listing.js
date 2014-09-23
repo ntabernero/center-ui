@@ -5,7 +5,7 @@ var prop = require('../utils/prop');
 
 function Listing (json) {
     var keys = [
-        'id', 'title', 'description', 'screenshots', 'techPocs', 'totalComments',
+        'uuid', 'id', 'title', 'description', 'screenshots', 'techPocs', 'totalComments',
         'avgRate', 'totalRate1', 'totalRate2', 'totalRate3','totalRate4',
         'totalRate5','totalVotes', 'state', 'tags', 'type','uuid',
         'versionName', 'imageLargeUrl', 'imageSmallUrl', 'imageMediumUrl',

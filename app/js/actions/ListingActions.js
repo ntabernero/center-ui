@@ -33,7 +33,7 @@ Actions.search.listen(function (options) {
 });
 
 Actions.launch.listen(function (listing) {
-    window.open(listing.launchUrl());
+    window.open('http://ozone-development.github.io/ozp-webtop/#/grid/launch/' + listing.uuid());
 });
 
 Actions.addToLibrary.listen(function (listing) {
