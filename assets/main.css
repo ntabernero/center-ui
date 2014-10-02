@@ -11555,6 +11555,7 @@ body {
 
 .quickview-header .quickview-header-actions .active {
   background: #ecc44d;
+  color: #fff;
 }
 
 .quickview-header .listing-icon {
