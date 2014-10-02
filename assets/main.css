@@ -1934,7 +1934,7 @@ body {
   font-size: 13px;
   line-height: 1.428571429;
   color: #0F1616;
-  background-color: #d6d6d6;
+  background-color: #8f9194;
 }
 
 input,
@@ -1985,7 +1985,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #d6d6d6;
+  background-color: #8f9194;
   border: 1px solid #ddd;
   border-radius: 0px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3570,7 +3570,7 @@ th {
 }
 
 .table .table {
-  background-color: #d6d6d6;
+  background-color: #8f9194;
 }
 
 .table-condensed > thead > tr > th,
@@ -5582,7 +5582,7 @@ tbody.collapse.in {
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs-justified > .active > .nav-tabs.nav-justified,
   .nav-tabs-justified > .active > .nav-tabs.nav-justified {
-    border-bottom-color: #d6d6d6;
+    border-bottom-color: #8f9194;
   }
 }
 
@@ -6568,7 +6568,7 @@ a.badge:focus {
   padding: 4px;
   margin-bottom: 18px;
   line-height: 1.428571429;
-  background-color: #d6d6d6;
+  background-color: #8f9194;
   border: 1px solid #ddd;
   border-radius: 0px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -11115,7 +11115,7 @@ img.mfp-img {
 
 html,
 body {
-  background: #d6d6d6;
+  background: #8f9194;
   font-family: 'Ubuntu Regular', 'Ubuntu';
   font-weight: 300;
 }
@@ -11124,7 +11124,7 @@ body {
   min-height: 100%;
   height: auto !important;
   width: 1260px;
-  background: #e8e8e8;
+  background: #eeeeef;
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -11242,7 +11242,7 @@ body {
 
 #header .spacer {
   height: 20px;
-  background: #e8e8e8;
+  background: #eeeeef;
   width: 100%;
 }
 
@@ -11376,7 +11376,12 @@ body {
 }
 
 .listing-tile .actions {
-  margin-left: 40px;
+  margin-left: 64px;
+}
+
+.listing-tile .actions > .active {
+  background: #ecc44d;
+  color: #fff;
 }
 
 .listing-tile:hover a,
@@ -11467,6 +11472,11 @@ body {
   margin-bottom: 20px;
 }
 
+.Discovery__NewArrivals,
+.Discovery__MostPopular {
+  margin-top: 40px;
+}
+
 .listings {
   padding: 0;
   overflow: hidden;
@@ -11541,6 +11551,10 @@ body {
   position: absolute;
   right: 60px;
   top: 23px;
+}
+
+.quickview-header .quickview-header-actions .active {
+  background: #ecc44d;
 }
 
 .quickview-header .listing-icon {
@@ -11821,6 +11835,11 @@ i {
 i.fa-star,
 i.fa-star-half-o {
   color: #ecc44d;
+}
+
+i.fa-star-o:before {
+  color: #dbdcdd;
+  content: "\f005";
 }
 
 label {
