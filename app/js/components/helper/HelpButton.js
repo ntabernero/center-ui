@@ -17,7 +17,11 @@ var HelpActivationButton = React.createClass({
 			'visibility' : 'visible'
 		});
 
-		// Applly superZ to the sidebar (bring it to front)
+
+		// Pop the sidebar and all assets related
+		// Will be combined with HelperCore later
+
+		$('.sidebarTutImg').show();
 		sidebar.addClass('superZ');
 		$('.sidebarTutImg').css({
 			'visibility': 'visible'

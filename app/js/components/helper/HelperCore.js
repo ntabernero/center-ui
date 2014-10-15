@@ -4,10 +4,9 @@
 var React = require('react');
 
 var helpImages = {
-	// baseDir: 'images/helper/', <- this woln't work for some reason :(
 	search: './images/helper/search.png',
 	sidebar: './images/helper/filter.png'
-}
+};
 
 var HelpImages = React.createClass({
 	render: function(){
@@ -23,15 +22,7 @@ var HelpImages = React.createClass({
 var NextButton = React.createClass({
 	render: function(){
 		return(
-			<button className="ghostButton" onClick={this.props.onProceed}>Next</button>
-		);
-	}
-});
-
-var PreviousButton = React.createClass({
-	render: function(){
-		return(
-			<button className="ghostButton" onClick={this.props.onGoback}>Previous</button>
+			<button id="nextButton" className="ghostButton pulse" onClick={this.props.onProceed}>Next</button>
 		);
 	}
 });
@@ -39,7 +30,7 @@ var PreviousButton = React.createClass({
 var DoneButton = React.createClass({
 	render: function(){
 		return(
-			<button className="ghostButton" onClick={this.props.onCloseTutorial}>Got it.</button>
+			<button id="doneButton" className="ghostButton" onClick={this.props.onCloseTutorial}>Got it</button>
 		);
 	}
 });
@@ -47,6 +38,10 @@ var DoneButton = React.createClass({
 
 var HelperActions = React.createClass({
 	tutorialProgress: 2,
+	globals: {
+		nextButton: $('#nextButton'),
+		doneButton: $('#doneButton')
+	},
 	toggleElements: {
 		clearMasks: function(){
 			$('.appendableMask').remove();
@@ -64,7 +59,7 @@ var HelperActions = React.createClass({
 		header: {
 			show: function(){
 				var header 			= $('#header'),
-					appendableMask 	= $('<div>').addClass('appendableMask');
+					appendableMask= $('<div>').addClass('appendableMask');
 
 				header.addClass('superZ');
 				header.find('.row:nth-child(2)').append(appendableMask);
@@ -82,6 +77,17 @@ var HelperActions = React.createClass({
 			}
 		}
 	},
+	restartInteractiveHelp: function(){
+		$('#nextButton').text('Next');
+		$('#doneButton').removeClass('pulse');
+		$('#nextButton').addClass('pulse');
+	},
+	lastSlide: function(){
+		$('#nextButton').text('Restart Tutorial');
+		$('#nextButton').removeClass('pulse');
+		$('#doneButton').addClass('pulse');
+		this.tutorialProgress=1;
+	},
 	proceed: function(){
 		switch(this.tutorialProgress){
 			case 1:
@@ -89,12 +95,18 @@ var HelperActions = React.createClass({
 				this.toggleElements.header.hide();
 				this.toggleElements.clearMasks();
 				this.tutorialProgress++;
+
+				/*Place at start of tutorial*/
+				this.restartInteractiveHelp();
 				break;
 
 			case 2:
 				this.toggleElements.sidebar.hide();
 				this.toggleElements.header.show();
-				this.tutorialProgress= 1;
+				this.tutorialProgress++;
+
+				/*Place at end of tutorial*/
+				this.lastSlide();
 				break;
 
 			default:
@@ -104,13 +116,19 @@ var HelperActions = React.createClass({
 	},
 	closeTutorial: function(){
 		var helperMask 		= $('.helperMask'),
-			sidebar 		= $('.sidebar'),
+			sidebar 				= $('.sidebar'),
 			helperActions 	= $('.helperActions'),
 			appendableMasks = $('.appendableMask');
 
 
+		this.tutorialProgress=1;
 		this.toggleElements.sidebar.hide();
 		this.toggleElements.header.hide();
+
+		// Hotfix to reset buttons
+		$('#nextButton').text('Next');
+		$('#nextButton').addClass('pulse');
+		$('#doneButton').removeClass('pulse');
 
 		// Hide the mask
 		helperMask.css({
@@ -128,7 +146,6 @@ var HelperActions = React.createClass({
 			<div>
 				<HelpImages />
 				<div className="helperActions">
-					<PreviousButton onGoback={this.goback} />
 					<DoneButton onCloseTutorial={this.closeTutorial} />
 					<NextButton onProceed={this.proceed} />
 				</div>
