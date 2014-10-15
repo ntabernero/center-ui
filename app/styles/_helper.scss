@@ -1,0 +1,72 @@
+.helperActions{
+	background: #fff;
+	position: fixed;
+	height: auto;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index: 10000000;
+	text-align: center;
+	visibility: hidden;
+
+	.ghostButton{
+		background: transparent;
+		padding: .5em;
+		color: #000;
+		font-size:12pt;
+		border:1px solid #000;
+		outline: none;
+		margin:1em;
+		transition: border .3s ease-in-out, color .3s ease-in-out;
+		-moz-transition: border .3s ease-in-out, color .3s ease-in-out;
+		-o-transition: border .3s ease-in-out, color .3s ease-in-out;
+		-webkit-transition: border .3s ease-in-out, color .3s ease-in-out;
+	}
+	.ghostButton:hover{
+			border:1px solid #00b3ff;
+			color: #00b3ff;
+	}
+}
+
+.superZ{
+	z-index: 10002 !important;
+	position: relative;
+	background: #e8e8e8;
+}
+
+.helperMask{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,.8);
+	visibility: hidden;
+	z-index:1001;
+}
+
+.appendableMask{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,.8);
+	z-index:1001;
+}
+
+
+.sidebarTutImg{
+	position: absolute;
+	top: 10em;
+	left: 22em;
+	z-index: 10000000;
+	visibility: hidden;
+}
+.searchTutImg{
+	position: absolute;
+	top: 5em;
+	left: 25em;
+	z-index: 10000000;
+	visibility: hidden;
+}

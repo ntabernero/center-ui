@@ -21,6 +21,7 @@ var Sidebar = require('./Sidebar');
 var ListingTile = require('./ListingTile');
 var FeaturedListings = require('./FeaturedListings');
 var Carousel = require('../carousel');
+var Helper = require('../helper/HelperCore.js');
 
 // store dependencies
 var DiscoveryPageStore = require('../../stores/DiscoveryPageStore');
@@ -58,6 +59,10 @@ var Discovery = React.createClass({
         /*jshint ignore:start */
         return (
             <div>
+                <div className="helperMask">
+
+                </div>
+                <Helper />
                 <Header>
                     <form className="navbar-form navbar-left" role="search">
                         <div className="form-group">
