@@ -13,13 +13,22 @@ module.exports = function (config) {
             'app/js/**/*-test.js'
         ],
         preprocessors: {
-            'app/js/**/*.js': ['webpack']
+            'app/js/**/*test.js': ['webpack']
+        },
+        coverageReporter: {
+            type : 'html',
+            dir : 'coverage/'
         },
         webpack: {
             cache: true,
             resolve: webpackOptions.resolve,
             module: {
                 loaders: webpackOptions.module.loaders,
+                postLoaders: [{
+                    test: /\.js$/,
+                    exclude: /(node_modules|bower_components)\//,
+                    loader: 'istanbul-instrumenter'
+                }],
                 noParse: webpackOptions.module.noParse
             },
             plugins: webpackOptions.plugins.concat([
@@ -33,7 +42,7 @@ module.exports = function (config) {
         },
         exclude: [],
         port: 8080,
-        logLevel: config.LOG_INFO,
+        logLevel: config.LOG_DEBUG,
         colors: true,
         autoWatch: true,
 
@@ -46,7 +55,7 @@ module.exports = function (config) {
         // - PhantomJS
         // - IE (only Windows)
         browsers: ['PhantomJS'],
-        reporters: ['progress'],
+        reporters: ['coverage'],
         captureTimeout: 60000,
         singleRun: true
     });
