@@ -11071,11 +11071,16 @@ html, body {
         padding: 3px 10px; }
         #user-menu .dropdown-menu > li > a > span {
           padding-left: 10px; }
+    #user-menu .dropdown-menu embed {
+      border: 0; }
 
 #sub-header h1 {
   font-weight: 400; }
 #sub-header .row {
   height: 60px; }
+
+.HelpModal .modal-body {
+  height: 100%; }
 
 .listing-tile {
   float: left;
@@ -11314,7 +11319,7 @@ html, body {
   resize: none;
   margin: 1em 0;
   width: 100%;
-  height: 12em;
+  height: 7em;
   display: block; }
 .Quickview__Changelog section button:first-of-type {
   margin-right: 6px; }
@@ -11345,7 +11350,7 @@ html, body {
   border-color: #009dd3; }
 
 .CreateEdit__form {
-  padding-top: 148px; }
+  padding-top: 158px; }
   .CreateEdit__form label.input-optional::after {
     content: " (optional)";
     font-size: smaller;
@@ -11364,6 +11369,8 @@ html, body {
   padding: 0 15px 0 15px;
   background: #eeeeef !important; }
   .CreateEdit__titlebar h1 {
+    margin-top: 0; }
+  .CreateEdit__titlebar h4 {
     border-bottom: 4px solid #dbdcdd;
     padding-bottom: 15px; }
   .CreateEdit__titlebar .btn-group {
@@ -11519,7 +11526,12 @@ input[type="checkbox"].ios.brand-info.checked + .track {
   box-shadow: inset 0 0 0 25px #08789e; }
 
 .ListingManagement__body {
-  padding-top: 55px; }
+  padding-top: 55px;
+  position: relative; }
+  .ListingManagement__body .btn-primary {
+    position: absolute;
+    right: 30px;
+    top: 80px; }
 
 .ListingManagement__TabContainer {
   margin-top: -32px; }
