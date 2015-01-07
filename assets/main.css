@@ -3923,8 +3923,8 @@ td, th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot');
-  src: url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
 
 .glyphicon {
   position: relative;
@@ -4539,8 +4539,8 @@ td, th {
 
 @font-face {
   font-family: 'icons';
-  src: url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/icons.eot');
-  src: url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/icons.eot?#iefix') format('embedded-opentype'), url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/icons.woff') format('woff'), url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/icons.ttf') format('truetype'), url('../../node_modules/bootstrap-sass/assets/fonts/bootstrap/icons.svg#icons') format('svg'); }
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg'); }
 
 [class^="icon-"], [class*=" icon-"] {
   position: relative;
@@ -9295,7 +9295,7 @@ img.mfp-img {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .AdminOwnerListingTile__actionMenuButton, .label-draft, .AdminOwnerListingTile.draft .AdminOwnerListingTile__approvalStatus, .label-pending, .AdminOwnerListingTile.pending .AdminOwnerListingTile__approvalStatus, .label-needs-action, .AdminOwnerListingTile.needs-action .AdminOwnerListingTile__approvalStatus, .label-published, .AdminOwnerListingTile.published .AdminOwnerListingTile__approvalStatus, .label-rejected {
+.fa, .AdminOwnerListingTile__actionMenuButton, .label-draft, .AdminOwnerListingTile.draft .AdminOwnerListingTile__approvalStatus, .label-pending, .AdminOwnerListingTile.pending .AdminOwnerListingTile__approvalStatus, .label-needs-action, .AdminOwnerListingTile.needs-action .AdminOwnerListingTile__approvalStatus, .label-published, .AdminOwnerListingTile.published .AdminOwnerListingTile__approvalStatus, .label-rejected, .AdminOwnerListingTile.rejected .AdminOwnerListingTile__approvalStatus {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -9353,9 +9353,9 @@ img.mfp-img {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.AdminOwnerListingTile__actionMenuButton, .pull-left.label-draft, .AdminOwnerListingTile.draft .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-pending, .AdminOwnerListingTile.pending .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-needs-action, .AdminOwnerListingTile.needs-action .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-published, .AdminOwnerListingTile.published .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-rejected {
+.fa.pull-left, .pull-left.AdminOwnerListingTile__actionMenuButton, .pull-left.label-draft, .AdminOwnerListingTile.draft .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-pending, .AdminOwnerListingTile.pending .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-needs-action, .AdminOwnerListingTile.needs-action .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-published, .AdminOwnerListingTile.published .pull-left.AdminOwnerListingTile__approvalStatus, .pull-left.label-rejected, .AdminOwnerListingTile.rejected .pull-left.AdminOwnerListingTile__approvalStatus {
   margin-right: 0.3em; }
-.fa.pull-right, .pull-right.AdminOwnerListingTile__actionMenuButton, .pull-right.label-draft, .AdminOwnerListingTile.draft .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-pending, .AdminOwnerListingTile.pending .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-needs-action, .AdminOwnerListingTile.needs-action .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-published, .AdminOwnerListingTile.published .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-rejected {
+.fa.pull-right, .pull-right.AdminOwnerListingTile__actionMenuButton, .pull-right.label-draft, .AdminOwnerListingTile.draft .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-pending, .AdminOwnerListingTile.pending .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-needs-action, .AdminOwnerListingTile.needs-action .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-published, .AdminOwnerListingTile.published .pull-right.AdminOwnerListingTile__approvalStatus, .pull-right.label-rejected, .AdminOwnerListingTile.rejected .pull-right.AdminOwnerListingTile__approvalStatus {
   margin-left: 0.3em; }
 
 .fa-spin {
@@ -9546,7 +9546,7 @@ img.mfp-img {
 .fa-play-circle-o:before {
   content: "\f01d"; }
 
-.fa-rotate-right:before, .fa-repeat:before, .label-rejected:before {
+.fa-rotate-right:before, .fa-repeat:before, .label-rejected:before, .AdminOwnerListingTile.rejected .AdminOwnerListingTile__approvalStatus:before {
   content: "\f01e"; }
 
 .fa-refresh:before {
@@ -11040,7 +11040,7 @@ html, body {
 .AdminOwnerListingTile {
   display: none;
   position: relative;
-  margin-right: 35px;
+  margin-right: 34px;
   margin-bottom: 30px;
   vertical-align: top; }
 
@@ -11645,10 +11645,10 @@ label {
 /*==============================
 =   Approval Status Indicators =
 ==============================*/
-.label-draft, .AdminOwnerListingTile.draft .AdminOwnerListingTile__approvalStatus, .label-pending, .AdminOwnerListingTile.pending .AdminOwnerListingTile__approvalStatus, .label-needs-action, .AdminOwnerListingTile.needs-action .AdminOwnerListingTile__approvalStatus, .label-published, .AdminOwnerListingTile.published .AdminOwnerListingTile__approvalStatus, .label-rejected {
+.label-draft, .AdminOwnerListingTile.draft .AdminOwnerListingTile__approvalStatus, .label-pending, .AdminOwnerListingTile.pending .AdminOwnerListingTile__approvalStatus, .label-needs-action, .AdminOwnerListingTile.needs-action .AdminOwnerListingTile__approvalStatus, .label-published, .AdminOwnerListingTile.published .AdminOwnerListingTile__approvalStatus, .label-rejected, .AdminOwnerListingTile.rejected .AdminOwnerListingTile__approvalStatus {
   padding-left: 0px !important;
   font-family: 'Ubuntu'; }
-  .label-draft::before, .AdminOwnerListingTile.draft .AdminOwnerListingTile__approvalStatus::before, .label-pending::before, .AdminOwnerListingTile.pending .AdminOwnerListingTile__approvalStatus::before, .label-needs-action::before, .AdminOwnerListingTile.needs-action .AdminOwnerListingTile__approvalStatus::before, .label-published::before, .AdminOwnerListingTile.published .AdminOwnerListingTile__approvalStatus::before, .label-rejected::before {
+  .label-draft::before, .AdminOwnerListingTile.draft .AdminOwnerListingTile__approvalStatus::before, .label-pending::before, .AdminOwnerListingTile.pending .AdminOwnerListingTile__approvalStatus::before, .label-needs-action::before, .AdminOwnerListingTile.needs-action .AdminOwnerListingTile__approvalStatus::before, .label-published::before, .AdminOwnerListingTile.published .AdminOwnerListingTile__approvalStatus::before, .label-rejected::before, .AdminOwnerListingTile.rejected .AdminOwnerListingTile__approvalStatus::before {
     font-family: 'FontAwesome';
     display: inline-block;
     width: 18px;
